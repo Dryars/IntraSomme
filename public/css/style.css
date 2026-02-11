@@ -1,0 +1,311 @@
+/* === RESET & GLOBAL === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+    background-color: #F9FAFB; /* clair et épuré */
+    color: #1F2937; /* gris foncé pour texte */
+    line-height: 1.6;
+    min-height: 100vh;
+    padding-bottom: 60px; /* pour footer fixe */
+}
+
+/* === LIENS & BOUTONS === */
+a {
+    color: #1E40AF; /* bleu principal */
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: #F97316; /* orange au survol */
+}
+
+button {
+    background-color: #F97316; /* orange */
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #EA580C; /* orange plus foncé */
+}
+
+/* === FORMULAIRES === */
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #D1D5DB; /* gris clair */
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #1E40AF; /* bleu focus */
+    outline: none;
+}
+
+/* === LISTES ET TABLEAUX === */
+ul, ol {
+    list-style: none;
+}
+
+li {
+    padding: 8px 0;
+    border-bottom: 1px solid #E5E7EB; /* gris très clair */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th, td {
+    padding: 12px;
+    border-bottom: 1px solid #E5E7EB;
+    text-align: left;
+}
+
+th {
+    background-color: #F3F4F6; /* gris clair */
+    color: #1E40AF; /* bleu pour titres */
+}
+
+/* === CARDS & CONTAINERS === */
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+}
+
+/* === HEADER & NAV === */
+header {
+    background-color: #1E40AF; /* bleu */
+    color: #fff;
+    padding: 15px 30px;
+}
+
+header a {
+    color: #fff;
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+/* === FOOTER === */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #F3F4F6;
+    color: #6B7280; /* gris */
+}
+
+.footer-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1E40AF; /* bleu */
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+.footer-nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.footer-nav a:hover {
+    color: #F97316; /* orange au survol */
+}
+
+/* === CALENDAR === */
+#calendar {
+    max-width: 900px;
+    margin: 20px auto;
+}
+
+/* === ALERTS & MESSAGES === */
+.alert {
+    padding: 10px 15px;
+    border-radius: 6px;
+    margin: 10px 0;
+    color: #fff;
+}
+
+.alert-success { background-color: #16A34A; } /* vert */
+.alert-error { background-color: #DC2626; } /* rouge */
+.alert-info { background-color: #1E40AF; } /* bleu */
+.alert-warning { background-color: #F97316; } /* orange */
+
+/* === LOGIN PAGE === */
+body.login-body {
+    background: url('../images/bg-login.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.login-wrapper {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.login-card {
+    background-color: rgba(255,255,255,0.95);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+.login-card .logo {
+    font-size: 36px;
+    font-weight: 700;
+    color: #1E40AF;
+    margin-bottom: 20px;
+}
+
+.login-card input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #D1D5DB;
+    font-size: 1rem;
+}
+
+.login-card input:focus {
+    border-color: #1E40AF;
+    outline: none;
+}
+
+.login-card button {
+    width: 100%;
+    padding: 12px;
+    background-color: #F97316;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.login-card button:hover {
+    background-color: #EA580C;
+}
+
+.login-card .error {
+    color: #DC2626;
+    margin-bottom: 15px;
+}
+
+/* === POLES GRID === */
+.pole-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 par ligne */
+    gap: 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+.pole-card {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pole-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.pole-card img {
+    width: 200px; /* plus grande image */
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.pole-card .pole-name {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* === CONTACTS === */
+.contacts {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #F3F4F6;
+    border-radius: 10px;
+}
+
+.contact {
+    margin-bottom: 10px;
+}
+
+/* === RESPONSIVE === */
+@media(max-width:1200px){
+    .pole-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .pole-card img {
+        width: 180px;
+        height: 180px;
+    }
+}
+
+@media(max-width:768px){
+    .pole-container {
+        grid-template-columns: 1fr;
+    }
+    .pole-card img {
+        width: 160px;
+        height: 160px;
+    }
+    .login-card {
+        padding: 20px;
+    }
+}
